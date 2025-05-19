@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abstração e Resolução de Problemas - UNIPAR</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .slide {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 30px;
+      height: 100vh;
+      font-size: 3em;
+      box-sizing: border-box;
+    }
+    .slide.active {
+      display: flex;
+    }
+    h1, h2 {
+      font-size: 4em;
+      margin-bottom: 10px;
+    }
+    p, li {
+      font-size: 2em;
+      margin: 6px 0;
+    }
+    ul {
+      text-align: left;
+      max-width: 800px;
+    }
+    .qrcode {
+      border: 2px dashed #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6em;
+    }
+    #navigator {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      font-size: 0.8em;
+      color: #000;
+    }
+    #navigator button {
+      padding: 4px 10px;
+      margin-left: 5px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide active">
+    <h1>Abstração e Resolução de Problemas</h1>
+    <p>Pilar do Pensamento Computacional</p>
+    <p><strong>Prof. Edvaldo Rodrigues – UNIPAR</strong></p>
+    <p>ADS / Administração / Contábeis – 1º Período</p>
+  </div>
+
+  <div class="slide">
+    <h2>Objetivos da Aula</h2>
+    <ul>
+      <li>Compreender o conceito de abstração</li>
+      <li>Identificar exemplos práticos no dia a dia</li>
+      <li>Aplicar a abstração para resolver problemas</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>O que é abstração?</h2>
+    <p>É a capacidade de focar nos aspectos mais importantes de um problema, ignorando detalhes irrelevantes.</p>
+    <p>Ajuda a reduzir a complexidade e facilita a solução de problemas.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Exemplo do dia a dia</h2>
+    <p><strong>Fazer café em uma cafeteira:</strong> Você se preocupa com o processo completo da máquina?</p>
+    <p>Não! Basta colocar o pó, a água e apertar um botão.</p>
+    <p>Isso é abstração: você ignora os detalhes técnicos do funcionamento.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Exemplo em Administração e Contabilidade</h2>
+    <ul>
+      <li>Emitir uma nota fiscal: sistema pede dados básicos (cliente, produto, valor)</li>
+      <li>O sistema calcula impostos e total automaticamente — você não vê os bastidores</li>
+      <li>Contadores usam sistemas como o SPED sem entender sua programação</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>Exemplo em Tecnologia</h2>
+    <p>Você usa um comando como <code>enviarEmail()</code> sem saber como o e-mail trafega na internet.</p>
+    <p>Funções e bibliotecas são exemplos de abstrações computacionais.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Por que abstrair?</h2>
+    <ul>
+      <li>Reduz a complexidade</li>
+      <li>Facilita o raciocínio e a manutenção</li>
+      <li>Permite focar na solução do problema</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>Atividade 1</h2>
+    <p>Liste 3 exemplos onde você aplica abstração no seu cotidiano:</p>
+    <img src="pc_atv_1.jpg" />
+<a href="https://forms.gle/WqzoZCLt9fhWQ1i68" target="_blank">https://forms.gle/WqzoZCLt9fhWQ1i68</a>
+    
+  </div>
+
+  <div class="slide">
+  <h2>Como aplicar abstração em processos</h2>
+  <p>Quando descrevemos um processo, nem tudo precisa ser explicado.</p>
+  <p><strong>Abstração</strong> é escolher apenas os passos essenciais, ignorando detalhes desnecessários.</p>
+
+  <p><strong>Exemplo:</strong> Processo de fazer um PIX</p>
+  <ul>
+    <li>1. Abrir o app do banco</li>
+    <li>2. Escolher a opção “PIX”</li>
+    <li>3. Inserir o valor</li>
+    <li>4. Informar a chave</li>
+    <li>5. Confirmar o envio</li>
+  </ul>
+  <p>Não precisa citar: cor do botão, animação do app, tipo de celular...</p>
+
+  <p>O importante é descrever as <strong>ações funcionais</strong> que fazem o processo acontecer.</p>
+</div>
+
+  <div class="slide">
+    <h2>Atividade 2</h2>
+    <p>Aplicar a abstração para descrever processos sem se prender a detalhes operacionais irrelevantes.
+</p>
+<img src="pc_atv_2.jpg" />
+<a href="https://forms.gle/kfBrVDwHPXVyUHEL7" target="_blank">https://forms.gle/kfBrVDwHPXVyUHEL7</a>
+    
+  </div>
+
+  <div class="slide">
+    <h2>Aplicando Abstração</h2>
+    <p>Problema: “Verificar se um aluno foi aprovado.”</p>
+    <ul>
+      <li>Informações irrelevantes: cor da camisa, cidade onde nasceu</li>
+      <li>Informações relevantes: média das notas, frequência</li>
+    </ul>
+    <p><strong>Abstração:</strong> focar nas informações que influenciam o resultado</p>
+  </div>
+
+  <div class="slide">
+    <h2>Atividade 3</h2>
+    <p>Aplicar a abstração para descrever processos sem se prender a detalhes operacionais irrelevantes.
+</p>
+<img src="pc_atv_3.jpg">
+<a href="https://forms.gle/3v6BNYQpeutGNytX9" target="_blank">https://forms.gle/3v6BNYQpeutGNytX9</a>
+    
+  </div>
+
+  <div class="slide">
+    <h2>Conclusão</h2>
+    <ul>
+      <li>Abstração está em todas as áreas: tecnologia, administração, contabilidade...</li>
+      <li>É uma ferramenta poderosa para resolver problemas de forma eficiente.</li>
+      <li>Na próxima aula: Algoritmos e Representações!</li>
+    </ul>
+  </div>
+
+  <div id="navigator">
+    <span id="counter">Slide 1</span>
+    <button onclick="prevSlide()">◀</button>
+    <button onclick="nextSlide()">▶</button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const counter = document.getElementById('counter');
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+      counter.textContent = `Slide ${index + 1} de ${slides.length}`;
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown') nextSlide();
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') prevSlide();
+    });
+
+    showSlide(current);
+  </script>
+</body>
+</html>
